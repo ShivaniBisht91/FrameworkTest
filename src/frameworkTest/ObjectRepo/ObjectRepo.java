@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 public class ObjectRepo {
 	
+	//Register page
 	public By email_id=By.id("email_create");
 	public By sub=By.id("SubmitCreate");
 	public By mrs=By.id("id_gender2");
@@ -18,5 +19,12 @@ public class ObjectRepo {
 	public By mobile=By.id("phone_mobile");
 	public By alias=By.id("alias");
 	public By subAccount=By.id("submitAccount");
+	
+	//login page
+	
+	public By signIn=By.xpath("//a[@title='Log in to your customer account']");
+	public By logEmail=By.id("email");
+	public By logPass=By.id("passwd");
+	public By logsub=By.id("SubmitLogin");
 
 }

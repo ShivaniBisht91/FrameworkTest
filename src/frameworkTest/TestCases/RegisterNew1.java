@@ -4,30 +4,32 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
-import frameworkTest.DriverReaders.AllDrivers;
+import frameworkTest.DriverReaders.AllDrivers1;
 import frameworkTest.KeywordUtil.KeywordUtil;
 import frameworkTest.ObjectRepo.ObjectRepo;
 
-public class RegisterNew extends AllDrivers{
-
+public class RegisterNew1 extends AllDrivers1 {
 	
-	public static void main(String[] args) throws InterruptedException {
-		
-		AllDrivers brwsr=new AllDrivers();
+
+  @Test
+  public void RegisterNewUser() {
+	  
 		KeywordUtil key=new KeywordUtil();
 		
 		ObjectRepo objrep=new ObjectRepo();
-	    brwsr.openChrome();
+		
 	    key.sendkeysFunction(objrep.email_id,"shivibisht91@gmail.com");
-	   // driver.findElement(By.id("email_create")).sendKeys("shivani.dsc513@gmail.com");
-	    Thread.sleep(2000);
+	    try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	    key.clickFunction(objrep.sub);
 	   
 	   WebDriverWait wait= new WebDriverWait(driver,60);
-	   
-	   
-	 
+	    
 	WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(objrep.mrs));
 	if(element.isDisplayed()) {
 		
@@ -61,11 +63,5 @@ public class RegisterNew extends AllDrivers{
 		
 		//WebElement name=driver.findElement(By.xpath("//*[@id=\"header\"]//div//a//span[contains(text(),'Shivani Bisht')]"));
 		
-	
-      
-	
-	}
-	
-
-
+  }
 }

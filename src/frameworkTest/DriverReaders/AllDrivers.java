@@ -17,7 +17,7 @@ public class AllDrivers {
 
 	public void openChrome() {
 		
-    File src=new File("H:\\Eclipse Workspace\\FrameworkTest\\src\\frameworkTest\\Configuration\\Config.properties");
+    File src=new File("D:\\Shivani_Workspce\\Projects\\FrameworkTest\\src\\frameworkTest\\Configuration\\Config.properties");
 		
 		try {
 			fis = new FileInputStream(src);

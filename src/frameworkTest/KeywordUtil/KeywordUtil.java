@@ -2,9 +2,9 @@ package frameworkTest.KeywordUtil;
 
 import org.openqa.selenium.By;
 
-import frameworkTest.DriverReaders.AllDrivers;
+import frameworkTest.DriverReaders.AllDrivers1;
 
-public class KeywordUtil extends AllDrivers{
+public class KeywordUtil extends AllDrivers1{
 	
 	public void sendkeysFunction(By id,String s) {
 		
@@ -13,7 +13,7 @@ public class KeywordUtil extends AllDrivers{
 }
 public void clickFunction(By id) {
 		
-		driver.findElement(id);
+		driver.findElement(id).click();;
 
 }
 }
