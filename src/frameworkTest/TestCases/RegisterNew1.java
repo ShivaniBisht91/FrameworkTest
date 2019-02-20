@@ -7,20 +7,22 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import frameworkTest.DriverReaders.AllDrivers1;
+import frameworkTest.ExcelReader.ExcelUtil;
 import frameworkTest.KeywordUtil.KeywordUtil;
 import frameworkTest.ObjectRepo.ObjectRepo;
 
 public class RegisterNew1 extends AllDrivers1 {
 	
 
-  @Test
-  public void RegisterNewUser() {
-	  
+ 
+  @Test(dataProvider="testData", dataProviderClass=ExcelUtil.class)
+public void RegisterNewUser(String email, String gender, String fname,String lname, String pass,String Afname, String Alname, String address, String city, String state1,String code, String mobile, String alias) {
+//  public void RegisterNewUser(Object[][] data1) {  
 		KeywordUtil key=new KeywordUtil();
 		
 		ObjectRepo objrep=new ObjectRepo();
 		
-	    key.sendkeysFunction(objrep.email_id,"shivibisht91@gmail.com");
+	    key.sendkeysFunction(objrep.email_id,email);
 	    try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
@@ -35,18 +37,18 @@ public class RegisterNew1 extends AllDrivers1 {
 		
 		key.clickFunction(objrep.mrs);
 		}
-	    key.sendkeysFunction(objrep.fname, "Shivani");
-	    key.sendkeysFunction(objrep.lname, "Bisht");
-	    key.sendkeysFunction(objrep.pass, "Shivi1991");
-	    key.sendkeysFunction(objrep.address, "1234,chd");	
-	    key.sendkeysFunction(objrep.city, "Chandigarh");	
+	    key.sendkeysFunction(objrep.fname, fname);
+	    key.sendkeysFunction(objrep.lname, lname);
+	    key.sendkeysFunction(objrep.pass, pass);
+	    key.sendkeysFunction(objrep.address, address);	
+	    key.sendkeysFunction(objrep.city, city);	
 		
 		WebElement state=driver.findElement(objrep.state);
 		
 		Select drop=new Select(state);
 		drop.selectByValue("32");
 		
-		key.sendkeysFunction(objrep.postcode, "12345");	
+		key.sendkeysFunction(objrep.postcode, code);	
 		
 		WebElement country=driver.findElement(objrep.country);
 		Select drop1=new Select(country);
@@ -57,9 +59,18 @@ public class RegisterNew1 extends AllDrivers1 {
 			
 		}
 		
-		key.sendkeysFunction(objrep.mobile, "9998787878");
-		key.sendkeysFunction(objrep.alias, "hello again");
+		key.sendkeysFunction(objrep.mobile, mobile);
+		key.sendkeysFunction(objrep.alias, alias);
 		key.clickFunction(objrep.subAccount);
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+		
+		key.clickFunction(objrep.signout);
 		
 		//WebElement name=driver.findElement(By.xpath("//*[@id=\"header\"]//div//a//span[contains(text(),'Shivani Bisht')]"));
 		

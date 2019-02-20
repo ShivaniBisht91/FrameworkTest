@@ -26,5 +26,6 @@ public class ObjectRepo {
 	public By logEmail=By.id("email");
 	public By logPass=By.id("passwd");
 	public By logsub=By.id("SubmitLogin");
+	public By signout=By.xpath("//a[@title='Log me out']");
 
 }

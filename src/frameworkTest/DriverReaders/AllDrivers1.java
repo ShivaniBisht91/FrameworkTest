@@ -1,5 +1,6 @@
 package frameworkTest.DriverReaders;
 
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,7 +9,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
+
 import org.testng.annotations.BeforeTest;
 
 public class AllDrivers1 {
@@ -96,7 +97,7 @@ public class AllDrivers1 {
   
   */
   
-  @AfterTest
+ /* @AfterTest
   public void quitBrowser() {
 	  
 	  try {
@@ -106,5 +107,5 @@ public class AllDrivers1 {
 	}
 	  
 	  driver.quit();
-  }
+  } */
 }
