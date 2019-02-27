@@ -5,7 +5,7 @@
     <classes>
       <class name="frameworkTest.TestCases.RegisterNew1">
         <methods>
-          <include name="RegisterNewUser" invocation-numbers="0"/>
+          <include name="RegisterNewUser" invocation-numbers="0 1"/>
           <include name="openChrome"/>
         </methods>
       </class> <!-- frameworkTest.TestCases.RegisterNew1 -->

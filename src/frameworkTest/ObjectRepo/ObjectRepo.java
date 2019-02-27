@@ -1,8 +1,11 @@
 package frameworkTest.ObjectRepo;
 
 import org.openqa.selenium.By;
+//import org.openqa.selenium.WebElement;
 
-public class ObjectRepo {
+import frameworkTest.DriverReaders.AllDrivers1;
+
+public class ObjectRepo extends AllDrivers1 {
 	
 	//Register page
 	public By email_id=By.id("email_create");
@@ -19,6 +22,8 @@ public class ObjectRepo {
 	public By mobile=By.id("phone_mobile");
 	public By alias=By.id("alias");
 	public By subAccount=By.id("submitAccount");
+	//public WebElement item = driver.findElement(By.xpath("//li[text()='An account using this email address has already been registered. Please enter a valid password or request a new one. ']"));
+	
 	
 	//login page
 	
@@ -27,5 +32,11 @@ public class ObjectRepo {
 	public By logPass=By.id("passwd");
 	public By logsub=By.id("SubmitLogin");
 	public By signout=By.xpath("//a[@title='Log me out']");
+	
+	//Home page
+	
+	public By search=By.id("search_query_top");
+	public By go=By.name("submit_search");
+	public By itemClick=By.xpath("(//*[text()='Quick view'])[1]");
 
 }

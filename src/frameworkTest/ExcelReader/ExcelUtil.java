@@ -41,24 +41,21 @@ public class ExcelUtil {
 		    
 		    tabArray=new String[rowCount][cellCount];
 
-			for (int i = 1; i < rowCount; i++) {
+			for (int i = 1; i <= rowCount; i++) {
 
 				//static Row rw = sh.getRow(i);
 
 				for (int j = 0; j < cellCount; j++) {
 					
-					tabArray[i][j]=sh.getRow(i).getCell(j).getStringCellValue();
-					System.out.println(tabArray[i][j]);
-					
+					tabArray[i-1][j]=sh.getRow(i).getCell(j).getStringCellValue();
+					System.out.println(tabArray[i-1][j]);
+			
 
 				}
 		
 			}
 			
-		
-		
-	
-			
+			wb.close();
 			}
 			catch (IOException e) {
 				
@@ -66,9 +63,10 @@ public class ExcelUtil {
 				
 			}
 		
-		wb.close();
-		
 		return(tabArray);
+		
 		}
+ 
+
  }
 

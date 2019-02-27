@@ -13,7 +13,13 @@ public class KeywordUtil extends AllDrivers1{
 }
 public void clickFunction(By id) {
 		
-		driver.findElement(id).click();;
+		driver.findElement(id).click();
+
+}
+
+public void clearFunction(By id) {
+	
+	driver.findElement(id).clear();
 
 }
 }
