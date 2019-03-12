@@ -32,6 +32,12 @@ public class SearchProduct extends AllDrivers1{
 		}
 		
 		key.clickFunction(objrep.itemClick);
-	  
+	    key.clickFunction(objrep.item);
+	    key.clickFunction(objrep.cartbtn);
+	    key.clickFunction(objrep.proceed);
+	    
+	   
+	    
+	    
   }
 }
