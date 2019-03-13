@@ -37,9 +37,11 @@ public class ObjectRepo extends AllDrivers1 {
 	
 	public By search=By.id("search_query_top");
 	public By go=By.name("submit_search");
-	public By itemClick=By.xpath("(//*[text()='Quick view'])[1]");
-	public By item=By.xpath("(//img[@class='replace-2x img-responsive'])[9]");
+	//public By itemClick=By.xpath("(//*[text()='Quick view'])[1]");
+	public By item=By.xpath("(//a[@class='product-name'])[9]");
 	public By cartbtn=By.xpath("//span[text()='Add to cart']");
 	public By proceed=By.xpath("//a[@title='Proceed to checkout']");
+	
+
 
 }

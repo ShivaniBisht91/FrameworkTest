@@ -1,5 +1,8 @@
 package frameworkTest.TestCases;
 
+import java.util.Iterator;
+import java.util.Set;
+
 import org.testng.annotations.Test;
 
 import frameworkTest.DriverReaders.AllDrivers1;
@@ -31,10 +34,23 @@ public class SearchProduct extends AllDrivers1{
 			e.printStackTrace();
 		}
 		
-		key.clickFunction(objrep.itemClick);
 	    key.clickFunction(objrep.item);
+	    try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    
 	    key.clickFunction(objrep.cartbtn);
-	    key.clickFunction(objrep.proceed);
+	    
+	    try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	   key.clickFunction(objrep.proceed);
 	    
 	   
 	    
