@@ -15,8 +15,8 @@ import org.testng.annotations.BeforeTest;
 public class AllDrivers1 {
 	
 	public static WebDriver driver;
-	Properties pro;
-	FileInputStream fis;
+	public Properties pro;
+	public FileInputStream fis;
 	
 	
 	

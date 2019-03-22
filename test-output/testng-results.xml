@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-03-13T11:00:17Z" name="Default suite" finished-at="2019-03-13T11:01:04Z" duration-ms="47408">
+  <suite started-at="2019-03-22T14:19:39Z" name="Default suite" finished-at="2019-03-22T14:20:44Z" duration-ms="64663">
     <groups>
     </groups>
-    <test started-at="2019-03-13T11:00:17Z" name="Default test" finished-at="2019-03-13T11:01:04Z" duration-ms="47408">
+    <test started-at="2019-03-22T14:19:39Z" name="Default test" finished-at="2019-03-22T14:20:44Z" duration-ms="64663">
       <class name="frameworkTest.TestCases.SearchProduct">
-        <test-method is-config="true" signature="openChrome()[pri:0, instance:frameworkTest.TestCases.SearchProduct@f2ff811]" started-at="2019-03-13T11:00:17Z" name="openChrome" finished-at="2019-03-13T11:00:29Z" duration-ms="12417" status="PASS">
+        <test-method is-config="true" signature="openChrome()[pri:0, instance:frameworkTest.TestCases.SearchProduct@f2ff811]" started-at="2019-03-22T14:19:39Z" name="openChrome" finished-at="2019-03-22T14:19:52Z" duration-ms="12829" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openChrome -->
-        <test-method signature="searchByValue()[pri:0, instance:frameworkTest.TestCases.SearchProduct@f2ff811]" started-at="2019-03-13T11:00:29Z" name="searchByValue" finished-at="2019-03-13T11:01:04Z" duration-ms="34978" status="PASS">
+        <test-method signature="searchByValue()[pri:0, instance:frameworkTest.TestCases.SearchProduct@f2ff811]" started-at="2019-03-22T14:19:52Z" name="searchByValue" finished-at="2019-03-22T14:20:44Z" duration-ms="51821" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchByValue -->

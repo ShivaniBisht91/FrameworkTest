@@ -1,13 +1,12 @@
 package frameworkTest.TestCases;
 
-import java.util.Iterator;
-import java.util.Set;
 
 import org.testng.annotations.Test;
 
 import frameworkTest.DriverReaders.AllDrivers1;
 import frameworkTest.KeywordUtil.KeywordUtil;
 import frameworkTest.ObjectRepo.ObjectRepo;
+import frameworkTest.commonScriptsUtil.Login;
 
 public class SearchProduct extends AllDrivers1{
   @Test
@@ -17,39 +16,22 @@ public class SearchProduct extends AllDrivers1{
 		
 		ObjectRepo objrep=new ObjectRepo();
 		
-		//login		
-		key.clickFunction(objrep.signIn);
-	    key.sendkeysFunction(objrep.logEmail,"shivibisht91@gmail.com");
-	    key.sendkeysFunction(objrep.logPass,"Shivi1991");
-	    key.clickFunction(objrep.logsub);
+		//login	
+		
+		Login lg=new Login();
+		lg.login();
 		
 	    //Search
 		key.sendkeysFunction(objrep.search, "Dress");
 		key.clickFunction(objrep.go);
 		
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		key.threadSleep(1000);
 		
 	    key.clickFunction(objrep.item);
-	    try {
-			Thread.sleep(4000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	    
+	    key.threadSleep(4000);
 	    key.clickFunction(objrep.cartbtn);
 	    
-	    try {
-			Thread.sleep(4000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	   key.threadSleep(4000);
 	   key.clickFunction(objrep.proceed);
 	    
 	   

@@ -22,4 +22,13 @@ public void clearFunction(By id) {
 	driver.findElement(id).clear();
 
 }
+
+public void threadSleep(int s) {
+	try {
+		Thread.sleep(s);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
 }
